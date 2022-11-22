@@ -11,12 +11,6 @@ $(function () {
         var value = $(this).siblings(".description").val()
         localStorage.setItem(time,value)
     })
-
-
-  timeChecker()
-  setInterval(timeChecker,30000)
-
-
    
    function timeChecker() {
     var currentTime = parseInt(dayjs().format('H'));
@@ -36,6 +30,9 @@ $(function () {
         }
     })
    }
+
+   timeChecker()
+   setInterval(timeChecker,30000)
 
 
 });
